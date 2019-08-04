@@ -1,0 +1,34 @@
+{
+  "enemiesToSpawn": 0,
+  "width": 17,
+  "height": 9,
+  "areas": [
+    {
+      "x": 10,
+      "y": 6,
+      "type": 3
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "type": 2
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "type": 4
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "type": 1
+    }
+  ],
+  "tileAdditions": [
+    {
+      "x": 8,
+      "y": 4,
+      "addition": 2
+    }
+  ]
+}

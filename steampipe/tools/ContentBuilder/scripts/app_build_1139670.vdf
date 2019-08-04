@@ -1,0 +1,16 @@
+"appbuild"
+{
+	"appid"	"1139670"
+	"desc" "uniTower"
+	"buildoutput" "..\output\"
+	"contentroot" "..\content\"
+	"setlive"	""
+	"preview" "0"
+	"local"	""
+	
+	"depots"
+	{
+		"1139671" "depot_build_1139671.vdf"
+		"1139672" "depot_build_1139672.vdf"
+	}
+}

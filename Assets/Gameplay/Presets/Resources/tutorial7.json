@@ -1,0 +1,28 @@
+{
+  "enemiesToSpawn": 80,
+  "width": 17,
+  "height": 9,
+  "tutorial": 7,
+  "areas": [
+    {
+      "x": 13,
+      "y": 4,
+      "type": 5
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "type": 5
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "type": 5
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "type": 5
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "enemiesToSpawn": 70,
+  "width": 17,
+  "height": 9,
+  "tutorial": 4,
+  "areas": [
+    {
+      "x": 8,
+      "y": 4,
+      "type": 3
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "type": 3
+    },
+    {
+      "x": 14,
+      "y": 6,
+      "type": 3
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "type": 3
+    },
+    {
+      "x": 14,
+      "y": 2,
+      "type": 3
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "type": 3
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "type": 3
+    }
+  ],
+  "tileAdditions": [
+    {
+      "x": 0,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 14,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 13,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 14,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 15,
+      "y": 3,
+      "addition": 2
+    }
+  ]
+}
+  

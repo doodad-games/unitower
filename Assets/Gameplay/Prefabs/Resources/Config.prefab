@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &38723223250696448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3126546228078793848}
+  - component: {fileID: 9090601289026865417}
+  m_Layer: 0
+  m_Name: Config
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3126546228078793848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38723223250696448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9090601289026865417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38723223250696448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de59cd674e1064d79b1df81ce8af2827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 67840314355093206, guid: 6d61f19b5d0cf4ac4a19c04083ed7837,
+    type: 3}
+  _particleShootHitPrefab: {fileID: 5089346534056112032, guid: 09b6feab8d12f4fcbbfa9c73eae0e856,
+    type: 3}
+  _projectilePrefab: {fileID: 1304732183737122996, guid: f6c4c7b7a5fd543e19d2f2ff6e8fb9d8,
+    type: 3}
+  _spreadPointerPrefab: {fileID: 2860801412592661799, guid: 2e88ad59f4ce94629af74d4cf2e20bb9,
+    type: 3}
+  _tilePrefab: {fileID: 4462502449789631519, guid: 5c3e3d2ef79114955821d65cf794e4cc,
+    type: 3}
+  _tileStartEndPointerPrefab: {fileID: 7922745624801132183, guid: ba98d676fbce84dfb8a8bced495c770d,
+    type: 3}
+  _tileColliderPrefab: {fileID: 1089862667458555253, guid: 33296415966964d819b22439fb7785b0,
+    type: 3}
+  _tileTowerPrefab: {fileID: 3355198426212744531, guid: b7e230f63e2e640d983147317667f109,
+    type: 3}
+  _tileColours:
+  - type: 0
+    colour: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  - type: 1
+    colour: {r: 0.7058824, g: 0.7058824, b: 0, a: 1}
+  - type: 2
+    colour: {r: 0, g: 0.7058824, b: 0.7058824, a: 1}
+  - type: 3
+    colour: {r: 0.7058824, g: 0, b: 0, a: 1}
+  - type: 4
+    colour: {r: 0, g: 0.7058824, b: 0, a: 1}
+  - type: 5
+    colour: {r: 0.7058824, g: 0, b: 0.7058824, a: 1}
+  _towerParticleColours:
+  - type: 0
+    colour: {r: 1, g: 1, b: 1, a: 1}
+  - type: 1
+    colour: {r: 1, g: 1, b: 0, a: 1}
+  - type: 2
+    colour: {r: 0, g: 1, b: 1, a: 1}
+  - type: 3
+    colour: {r: 1, g: 0, b: 0, a: 1}
+  - type: 4
+    colour: {r: 0, g: 1, b: 0, a: 1}
+  - type: 5
+    colour: {r: 1, g: 0, b: 1, a: 1}

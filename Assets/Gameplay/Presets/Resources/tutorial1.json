@@ -1,0 +1,113 @@
+{
+  "enemiesToSpawn": 40,
+  "width": 17,
+  "height": 9,
+  "tutorial": 1,
+  "tileAdditions": [
+    {
+      "x": 6,
+      "y": 0,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "addition": 2
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "addition": 2
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "addition": 2
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "addition": 2
+    }
+  ]
+}
