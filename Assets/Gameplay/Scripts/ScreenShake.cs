@@ -14,6 +14,7 @@ public class ScreenShake : MonoBehaviour
     #pragma warning disable CS0649
     [SerializeField] Transform _reference;
     [SerializeField] float _magnitude;
+    [SerializeField] bool _isUI;
     #pragma warning restore CS0649
 
     float _shakeUntil;
@@ -30,7 +31,11 @@ public class ScreenShake : MonoBehaviour
                     C.CameraShakeMagnitude * _magnitude;
 
                 transform.position =
-                    _reference.position + new Vector3(rnd.x, 0f, rnd.y);
+                    _reference.position + new Vector3(
+                        rnd.x,
+                        _isUI ? rnd.y : 0f,
+                        _isUI ? 0f : rnd.y
+                    );
             }
             else
             {

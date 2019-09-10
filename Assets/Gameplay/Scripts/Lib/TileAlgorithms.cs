@@ -24,6 +24,9 @@ public static class TA
     ,   new Vector2Int(0, -1)
     };
 
+    static FakeTile _tile = new FakeTile();
+    static FakeTile _tileWithAddition = new FakeTile { HasAdditions = true };
+
     public static int RowColToN(int width, int row, int col) =>
         row * (width + 1) + col;
 
@@ -37,6 +40,11 @@ public static class TA
     {
         var width = generation.Width;
         var height = generation.Height;
+
+        var map = new Dictionary<int, ITile>();
+
+        map[RowColToN(width, height / 2, 0)] = _tileWithAddition;
+        map[RowColToN(width, height / 2, width - 1)] = _tileWithAddition;
 
         // Basic validation
         if (
@@ -55,7 +63,6 @@ public static class TA
                 )
             ) return false;
 
-            var tilesTouched = new HashSet<int>();
             foreach (var area in generation.Areas)
             {
                 var x = area.X;
@@ -82,15 +89,11 @@ public static class TA
                     for (var testX = minCol; testX <= maxCol; ++testX)
                     {
                         // Don't touch the start/end points
-                        if (
-                            testY == height / 2 &&
-                            (testX == 0 || testX == width - 1)
-                        ) return false;
-
                         // Don't overlap any areas
                         var n = RowColToN(width, testY, testX);
-                        if (tilesTouched.Contains(n)) return false;
-                        tilesTouched.Add(n);
+                        if (map.ContainsKey(n)) return false;
+
+                        map[n] = _tile;
                     }
                 }
             }
@@ -104,7 +107,6 @@ public static class TA
                 )
             ) return false;
 
-            var additions = new HashSet<int>();
             foreach (var addition in generation.TileAdditions)
             {
                 var x = addition.X;
@@ -123,19 +125,18 @@ public static class TA
                     return false;
 
                 // Don't touch the start/end points
-                if (
-                    y == height / 2 &&
-                    (x == 0 || x == width - 1)
-                ) return false;
-
                 // Don't overlap any additions
                 var n = RowColToN(width, y, x);
-                if (additions.Contains(n)) return false;
-                additions.Add(n);
+                if (
+                    map.ContainsKey(n) &&
+                    map[n].HasAdditions
+                ) return false;
+
+                map[n] = _tileWithAddition;
             }
         }
 
-        return true;
+        return CanPath(width, height, map);
     }
     
     public static GenerationData Generate(int seed, int width, int height)
@@ -147,13 +148,10 @@ public static class TA
             height % 2 != 1
         ) throw new NotSupportedException();
 
-        var map = new Dictionary<int, FakeTile>();
+        var map = new Dictionary<int, ITile>();
 
-        var tile = new FakeTile();
-        var tileWithAddition = new FakeTile { HasAdditions = true };
-
-        map[RowColToN(width, height / 2, 0)] = tileWithAddition;
-        map[RowColToN(width, height / 2, width - 1)] = tileWithAddition;
+        map[RowColToN(width, height / 2, 0)] = _tileWithAddition;
+        map[RowColToN(width, height / 2, width - 1)] = _tileWithAddition;
 
         UnityEngine.Random.InitState(seed);
 
@@ -222,7 +220,7 @@ public static class TA
                     var maxCol = col + 1;
                     for (var y = minRow; y <= maxRow; ++y)
                         for (var x = minCol; x <= maxCol; ++x)
-                            map[RowColToN(width, y, x)] = tile;
+                            map[RowColToN(width, y, x)] = _tile;
                 }
 
                 areas.Add(new GenerationAreaData(col, row, type));
@@ -265,10 +263,16 @@ public static class TA
                     }
                 }
 
-                if (!canPlace) break;
+                if (!(
+                    canPlace &&
+                    CanPath(
+                        width, height, map,
+                        new Vector2Int(col, row)
+                    )
+                )) break;
 
                 colliders.Add(new GenerationTileAdditionData(col, row, TileAddition.Collider));
-                map[n] = tileWithAddition;
+                map[n] = _tileWithAddition;
 
                 curChance *= consecutiveChanceMultiplier;
             }
@@ -287,7 +291,7 @@ public static class TA
         int width,
         int height,
         IReadOnlyDictionary<int, ITile> map,
-        Vector2Int attemptedPlacement
+        Vector2Int? attemptedPlacement = null
     )
     {
         var reached = new HashSet<int>();
@@ -316,9 +320,12 @@ public static class TA
                     newPos.x < 0 ||
                     newPos.y >= height ||
                     newPos.y < 0 ||
-                    !map.ContainsKey(newN) ||
-                    newPos == attemptedPlacement ||
                     (
+                        attemptedPlacement.HasValue &&
+                        newPos == attemptedPlacement
+                    ) ||
+                    (
+                        map.ContainsKey(newN) &&
                         map[newN].HasAdditions &&
                         newN != destN
                     )

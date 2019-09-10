@@ -120,7 +120,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1.1
+  bundleVersion: 0.1.2
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -151,6 +151,8 @@ PlayerSettings:
       sharedDepthBuffer: 1
       dashSupport: 1
       lowOverheadMode: 0
+      protectedContext: 0
+      v2Signing: 0
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
   protectGraphicsMemory: 0
@@ -166,7 +168,7 @@ PlayerSettings:
     Standalone: games.doodad.unitower
     iPhone: games.doodad.unitower.ios
   buildNumber: {}
-  AndroidBundleVersionCode: 1001
+  AndroidBundleVersionCode: 1002
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 28
   AndroidPreferredInstallLocation: 1
@@ -259,7 +261,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: /Users/bilalakil/Developer/bitbucket.org/doodad-games/creds/unitower/android-keystore.keystore
+  AndroidKeystoreName: /Volumes/Mac500GB/Developer/bitbucket.org/doodad-games/creds/unitower/android-keystore.keystore
   AndroidKeyaliasName: unitower
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
@@ -754,6 +756,7 @@ PlayerSettings:
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
@@ -764,6 +767,7 @@ PlayerSettings:
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform:
     Android: 3
+    Standalone: 3
     WebGL: 3
     iPhone: 3
   m_RenderingPath: 1
