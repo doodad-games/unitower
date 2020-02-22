@@ -188,6 +188,8 @@ public class GameController : MonoBehaviour
         _highestScore = score;
         PlayerPrefs.SetInt(C.PPHighestScore, score);
         PlayerPrefs.SetInt(C.PPHighestScoreSeed, _seed);
+
+        Kongregate.SetStat(C.PPHighestScore, score);
     }
 
     static void ApplyCurrentSpeed() =>

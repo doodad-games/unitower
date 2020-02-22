@@ -5,6 +5,7 @@
     "com.unity.ide.vscode": "1.1.4",
     "com.unity.textmeshpro": "2.0.1",
     "com.unity.ugui": "1.0.0",
+    "me.bilalakil.my-unity-library": "https://github.com/bilalakil/my-unity-library.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -36,5 +37,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "me.bilalakil.my-unity-library": {
+      "revision": "HEAD",
+      "hash": "78a7f145946e3e59a8bb51ef5db7faf69f522a31"
+    }
   }
 }
